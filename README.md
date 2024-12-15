@@ -1,2 +1,2 @@
-#usernam : wira
+#username : wira
 #password : wira
