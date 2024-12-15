@@ -1,0 +1,84 @@
+/* import font  */
+@font-face {
+    font-family: 'poxast';
+    src: url(../font/Poxast-Regular.ttf);
+}
+
+/* navbar */
+.navbar {
+    background-color: #333;
+    border: none;
+    padding: 20px 30px;
+}
+.navbar-brand {
+    font-family: 'poxast';
+    font-weight: bold;
+    color: #ffffff !important;
+}
+.navbar-brand span {
+    color: #e74c3c;
+}
+.navbar-nav > li > a {
+    color: #ffffff !important;
+    padding: 15px 20px;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li.active > a {
+    color: #e74c3c !important;
+    background-color: transparent !important;
+}
+.navbar-right .badge {
+    background-color: #e74c3c;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.navbar-right > li > a {
+    color: #bbb;
+    padding: 15px 20px;
+}
+.navbar-right > li > a:hover {
+    color: #e74c3c !important;
+}
+/* navbar end */
+
+/* Footer */
+#brand {
+    font-family: Poxast;
+    font-size: x-large;
+}
+#brand span {
+    font-family: Poxast;
+    color: #e74c3c;
+}
+.footer {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+.footer h5 {
+    margin-bottom: 20px;
+}
+.footer .list-inline > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.footer .list-inline > li > a {
+    color: #343a40;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.footer .list-inline > li > a:hover {
+    color: #e74c3c;
+}
+.footer .list-unstyled > li > a {
+    color: #343a40;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer .list-unstyled > li > a:hover {
+    color: #e74c3c;
+}
+.footer .text-center {
+    margin-top: 20px;
+}
+/* footer end */

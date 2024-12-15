@@ -1,0 +1,480 @@
+/* import font  */
+@font-face {
+    font-family: 'poxast';
+    src: url(font/Poxast-Regular.ttf);
+}
+
+/* navbar */
+.navbar {
+    background-color: #333;
+    border: none;
+    padding: 20px 30px;
+}
+.navbar-brand {
+    font-family: 'poxast';
+    font-weight: bold;
+    color: #ffffff !important;
+}
+.navbar-brand span {
+    color: #e74c3c;
+}
+.navbar-nav > li > a {
+    color: #ffffff !important;
+    padding: 15px 20px;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li.active > a {
+    color: #e74c3c !important;
+    background-color: transparent !important;
+}
+.navbar-right .badge {
+    background-color: #e74c3c;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.navbar-right > li > a {
+    color: #bbb;
+    padding: 15px 20px;
+}
+.navbar-right > li > a:hover {
+    color: #e74c3c !important;
+}
+/* navbar end */
+
+/* carousel */
+.carousel-inner > .item > img {
+    width: 100%;
+    height: 95vh;
+    margin-top: 50px;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    color: #e74c3c;
+}
+.carousel-indicators li {
+    background-color: #e74c3c;
+}
+.carousel-indicators .active {
+    background-color: #fff;
+}
+/* carousel end  */
+
+/* brand logo  */
+.brand-logo {
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+/* card home */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 60px;
+    margin: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative;
+    height: 480px;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+.product-card img {
+    max-width: 100%;
+    height: 250px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.product-card .price {
+    color: red;
+    font-weight: bold;
+}
+.product-card .old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+.product-card .rating {
+    color: #f39c12;
+}
+.container h1, .container p {
+    font-weight: bolder;
+    text-align: center;
+}
+.product-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+.product-card:hover .product-buttons {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+/* card home end */
+
+/* filter product  */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 120px;
+}
+.filter-container .search-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.filter-container .search-input input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+.filter-container .search-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.filter-container .search-btn:hover {
+    background-color: #ff1e00;
+    color: #fff;
+}
+.filter-container .results-info {
+    font-size: 1em;
+    color: #888;
+}
+.filter-container .dropdown {
+    display: inline-block;
+}
+.filter-container .dropdown-toggle {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.filter-container .dropdown-menu {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.filter-container .dropdown-menu > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+.filter-container .dropdown-menu > li > a:hover {
+    background-color: #ff1e00;
+    color: #fff;
+}
+/* filter product end */
+
+/* pagination  */
+.pagination-centered {
+    display: flex;
+    justify-content: center;
+}
+.pagination > li > a {
+    color: #e74c3c !important;
+}
+.pagination > li > a:hover {
+    background-color: #e74c3c !important;
+    color: white !important;
+}
+/* pagination end */
+
+/* promosi section */
+.promosi-section {
+    background: url('images/carousel/nvida-gpu.png');
+    background-size: cover;
+    padding: 60px 0;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.promosi-section .container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+.promosi-section h6 {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.promosi-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.promosi-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.promosi-section .btn {
+    background-color: #ff6f61;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+.promosi-section .btn:hover {
+    background-color: #ff3b2f;
+}
+/* promosi end */
+
+/* testimonials */
+.testimonials {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    margin: 50px 0px 50px 0px;
+}
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.testimonials p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}
+.testimonials .img-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.testimonials .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.testimonials .text-center {
+    text-align: center;
+}
+.carousel-indicators li {
+    background-color: #777;
+}
+.carousel-indicators .active {
+    background-color: #333;
+}
+/* testimonials end */
+
+/* Styling untuk section about */
+.about-section {
+    margin-top: 100px;
+    padding: 0;
+}
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.about-section p {
+    font-size: 16px;
+    color: #777;
+}
+.about-section h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.about-section .img-responsive {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+/* Styling untuk team section */
+.about-section .img-circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.about-section h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.about-section p {
+    font-size: 16px;
+    color: #777;
+}
+/* section about end */
+
+/* Styling untuk section kontak */
+.contact-section {
+    margin-top: 100px;
+    padding: 50px 0;
+}
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    font-size: 16px;
+    color: #777;
+}
+.contact-section h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+.contact-section .btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+}
+.contact-section .btn:hover {
+    background-color: #e60000;
+}
+/* section kontak end */
+
+/* Styling untuk informasi kontak */
+.contact-info {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.contact-info i {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+.contact-info p {
+    font-size: 16px;
+    color: #777;
+}
+/* informasi kontak end */
+
+/* Styling untuk form newsletter */
+.form-inline {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 35px;
+}
+.form-inline .form-control {
+    width: 70%;
+    margin-right: 10px;
+}
+.form-inline .btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+}
+.form-inline .btn:hover {
+    background-color: #e60000;
+}
+/* form newsletter end */
+
+/* Styling untuk ikon media sosial */
+.list-inline {
+    margin-top: 10px;
+}
+.list-inline > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.list-inline > li > a {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.list-inline > li > a:hover {
+    color: #ff4d4d;
+}
+/* ikon media sosial end */
+
+/* Footer */
+#brand {
+    font-family: Poxast;
+    font-size: x-large;
+}
+#brand span {
+    font-family: Poxast;
+    color: #e74c3c;
+}
+.footer {
+    padding: 40px 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+.footer h5 {
+    margin-bottom: 20px;
+}
+.footer .list-inline > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.footer .list-inline > li > a {
+    color: #343a40;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.footer .list-inline > li > a:hover {
+    color: #e74c3c;
+}
+.footer .list-unstyled > li > a {
+    color: #343a40;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer .list-unstyled > li > a:hover {
+    color: #e74c3c;
+}
+.footer .text-center {
+    margin-top: 20px;
+}
+/* footer end */
+
+/* Media queries untuk tampilan responsif */
+@media (max-width: 767px) {
+    /* filter  */
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 30px;
+    }
+    .filter-container .search-input,
+    .filter-container .results-info,
+    .filter-container .dropdown {
+        width: 100%;
+    }
+    .filter-container .search-input {
+        display: flex;
+        width: 100%;
+    }
+    .filter-container .search-input input {
+        flex: 1;
+    }
+    .filter-container .search-input button {
+        margin-left: 10px;
+    }
+}
+/* media queries end */
