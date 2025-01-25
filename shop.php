@@ -74,8 +74,8 @@ $results_text = empty($search) ? "Showing all products" : "Showing results for: 
                 <p class="old-price">Rp<?php echo number_format($row['old_price'], 0, ',', '.'); ?></p>
                 <p class="price">Rp<?php echo number_format($row['price'], 0, ',', '.'); ?></p>
                 <div class="product-buttons">
-                    <a href="#orderModal" data-toggle="modal"><button class="btn btn-primary btn-buy-now">Buy Now</button></a>
-                    <button class="btn btn-success btn-add-to-cart">Add to Cart</button>
+                    <a href="order.php?product_id=<?php echo $row['id']; ?>" class="btn btn-buy-now">Buy Now</a>
+                    <button class="btn btn-add-to-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -86,59 +86,7 @@ $results_text = empty($search) ? "Showing all products" : "Showing results for: 
     </div>
 </div>
 <!-- product end -->
-
-<!-- Modal Pemesanan -->
-<div class="modal fade" id="orderModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Form Pemesanan</h4>
-                </div>
-                <div class="modal-body">
-                    <form id="orderForm" action="proses-order.php" method="POST">
-                        <input type="hidden" name="product_id" id="product_id">
-                        <input type="hidden" name="product_price" id="product_price">
-                        
-                        <div class="form-group">
-                            <label>Nama Produk:</label>
-                            <p id="product_name" class="form-control-static"></p>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Harga:</label>
-                            <p id="price_display" class="form-control-static"></p>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="customer_name">Nama Lengkap:</label>
-                            <input type="text" class="form-control" name="customer_name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">No. Telepon:</label>
-                            <input type="tel" class="form-control" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="address">Alamat Lengkap:</label>
-                            <textarea class="form-control" name="address" rows="3" required></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="quantity">Jumlah:</label>
-                            <input type="number" class="form-control" name="quantity" min="1" value="1" required>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    
+ 
    <!-- pagination start -->
    <div class="container">
     <nav aria-label="Page navigation">

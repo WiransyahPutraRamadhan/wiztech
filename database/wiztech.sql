@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2024 at 03:33 PM
+-- Generation Time: Jan 25, 2025 at 09:05 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `judul`, `konten`, `gambar`, `tanggal`) VALUES
-(1, 'asd', 'asdas', 'images/blog/2024-12-10-12-29-37.jpg', '2024-12-10 12:34:14');
+(3, 'blog1', '<p>ini blog</p>\r\n', 'images/blog/ASRock Z790 Taichi Lite (LGA1700, Z790, DDR5, USB3.2 Type-C, SATA3).png', '2025-01-21 23:39:48');
 
 -- --------------------------------------------------------
 
@@ -63,6 +63,33 @@ CREATE TABLE `messages` (
 
 INSERT INTO `messages` (`id`, `name`, `email`, `subject`, `message`, `created_at`) VALUES
 (4, 'ucup', 'ucu@gmail.com', 'pesan dari ucup', 'isi pesan ucup', '2024-12-10 13:32:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `address` text NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `total_price` decimal(10,0) NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` enum('pending','processing','shipped','delivered','cancelled') DEFAULT 'pending'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `product_id`, `customer_name`, `phone`, `address`, `quantity`, `total_price`, `order_date`, `status`) VALUES
+(5, 3, 'rwrwe', '25645645', 'dgdsfg', 1, 5000000, '2025-01-25 06:54:05', 'pending'),
+(6, 3, 'rwrwe', '25645645', 'asdas', 2, 10000000, '2025-01-25 07:05:05', 'pending'),
+(7, 2, 'rwrwe', '025645645', 'dgdsfg', 5, 4500000, '2025-01-25 07:07:39', 'processing');
 
 -- --------------------------------------------------------
 
@@ -114,7 +141,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `token`, `status`, `foto`, `last_login`) VALUES
-(4, 'wira', '6215f4770ee800ad5402bc02be783c26', 'wira@gmail.com', '137a9be81bc27ed6e5a6144ff5e81280', '1', '2024-12-10-12-29-37.jpg', '2024-12-10 20:58:37');
+(4, 'wira', '6215f4770ee800ad5402bc02be783c26', 'wira@gmail.com', '137a9be81bc27ed6e5a6144ff5e81280', '1', '2024-12-10-12-29-37.jpg', '2025-01-25 13:53:34');
 
 --
 -- Indexes for dumped tables
@@ -131,6 +158,13 @@ ALTER TABLE `blog`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `products`
@@ -154,13 +188,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -173,6 +213,16 @@ ALTER TABLE `products`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

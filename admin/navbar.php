@@ -32,6 +32,7 @@
                 <li class="<?= $page == 'index.php' ? 'active' : '' ?>"><a href="index.php">HOME</a></li>
                 <li class="<?= $page == 'tambah-produk.php' ? 'active' : '' ?>"><a href="tambah-produk.php">Tambah Produk</a></li>
                 <li class="<?= $page == 'data-produk.php' ? 'active' : '' ?>"><a href="data-produk.php">Data Produk</a></li>
+                <li class="<?= $page == 'data-order.php' ? 'active' : '' ?>"><a href="data-order.php">Data Order</a></li>
                 <li class="<?= $page == 'pesan.php' ? 'active' : '' ?>"><a href="pesan.php">Data Pesan</a></li>
                 <li class="<?= $page == 'tampil-user.php' ? 'active' : '' ?>"><a href="tampil-user.php">Data User</a></li>
                 <li class="<?= $page == 'tampil-blog.php' ? 'active' : '' ?>"><a href="tampil-blog.php">Data Blog</a></li>

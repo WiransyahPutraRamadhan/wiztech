@@ -1,13 +1,20 @@
-<!doctype HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Login admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
-<style>
+    <link rel="stylesheet" href="dataTable/datatables.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap/fonts/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
       body {
         padding-top: 100px;
       }
 		</style>
+    <title>WizTech</title>
 </head>
 <body>
 <div class="container">

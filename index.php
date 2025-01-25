@@ -1,4 +1,4 @@
-<?php include 'navbar.php'; ?>
+<?php include "navbar.php"; ?>
 
     <!-- carousel start -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -87,8 +87,8 @@
                 <p class="old-price">Rp<?php echo number_format($row['old_price'], 0, ',', '.'); ?></p>
                 <p class="price">Rp<?php echo number_format($row['price'], 0, ',', '.'); ?></p>
                 <div class="product-buttons">                
-                    <a href="#orderModal" data-toggle="modal"><button class="btn btn-primary btn-buy-now">Buy Now</button></a>
-                    <button class="btn btn-success btn-add-to-cart">Add to Cart</button>
+                    <a href="order.php?product_id=<?php echo $row['id']; ?>" class="btn btn-buy-now">Buy Now</a>
+                    <button class="btn btn-add-to-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -147,8 +147,8 @@
                 <p class="old-price">Rp<?php echo number_format($row['old_price'], 0, ',', '.'); ?></p>
                 <p class="price">Rp<?php echo number_format($row['price'], 0, ',', '.'); ?></p>
                 <div class="product-buttons">
-                    <a href="#orderModal" data-toggle="modal"><button class="btn btn-primary btn-buy-now">Buy Now</button></a>
-                    <button class="btn btn-success btn-add-to-cart">Add to Cart</button>
+                    <a href="order.php?product_id=<?php echo $row['id']; ?>" class="btn btn-buy-now">Buy Now</a>
+                    <button class="btn btn-add-to-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -257,6 +257,7 @@ $result = $koneksi->query($sql);
     </div>
 </div>
 <!-- blog end  -->
+
     <!-- newsletter start-->
     <div class="container">
         <div class="row">
